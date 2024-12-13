@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1>Key press event tracker </h1>
+    <p>press any and see displayed bellow. Press 'Escape' to see special message  </p>
+    <p id="log"></p>
+
+    <script>
+        const log = document.getElementById("log");
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") {
+                log.textContent = "Вы нажали: Escape (Escape key pressed! Press any key to continue)";
+            } else {
+                log.textContent =` Вы нажали: ${e.key}`;
+            }
+        });
+    </script> -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        input {
+            font-size: 18px;
+            padding: 10px;
+            width: 300px;
+        }
+        p {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+    <input type="password" placeholder="Введите текст" id="input" />
+    <p id="txt"></p>
+
+    <script>
+        const input = document.getElementById("input");
+        const txt = document.getElementById("txt");
+        input.addEventListener("input", () => {
+            txt.textContent = input.value;
+        });
+
+        input.addEventListener("keydown", (e) => {
+            if (e.key === "Enter") {
+                txt.textContent = "";
+                input.value = ""; 
+            }
+        });
+    </script>
+</body>
+</html>
